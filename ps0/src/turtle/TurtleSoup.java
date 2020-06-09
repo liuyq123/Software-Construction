@@ -15,7 +15,10 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawSquare(Turtle turtle, int sideLength) {
-        throw new RuntimeException("implement me!");
+        for (int i = 0; i < 4; i++) {
+            turtle.forward(sideLength);
+            turtle.turn(90.0);
+        }
     }
 
     /**
@@ -28,7 +31,8 @@ public class TurtleSoup {
      * @return angle in degrees, where 0 <= angle < 360
      */
     public static double calculateRegularPolygonAngle(int sides) {
-        throw new RuntimeException("implement me!");
+        double angle = 180 * (sides - 2) / (double) sides;
+        return angle;
     }
 
     /**
@@ -42,7 +46,8 @@ public class TurtleSoup {
      * @return the integer number of sides
      */
     public static int calculatePolygonSidesFromAngle(double angle) {
-        throw new RuntimeException("implement me!");
+        int sides = (int) Math.round(2 / (1 - angle / 180));
+        return sides;
     }
 
     /**
@@ -55,7 +60,11 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawRegularPolygon(Turtle turtle, int sides, int sideLength) {
-        throw new RuntimeException("implement me!");
+        double angle = calculateRegularPolygonAngle(sides);
+        for (int i = 0; i < sides; i++) {
+            turtle.forward(sideLength);
+            turtle.turn(180 - angle);
+        }
     }
 
     /**
@@ -79,7 +88,14 @@ public class TurtleSoup {
      */
     public static double calculateHeadingToPoint(double currentHeading, int currentX, int currentY,
                                                  int targetX, int targetY) {
-        throw new RuntimeException("implement me!");
+        int vectorX = targetX - currentX;
+        int vectorY = targetY - currentY;
+        double scalar = Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2));
+        // cosine of the angle between positive y axis and the vector start at current and end at target
+        double cosOfPY = vectorY / scalar;
+        double angleOfPY = Math.acos(cosOfPY);
+        double angle = (angleOfPY * 180 / Math.PI - currentHeading + 360) % 360;
+        return angle;
     }
 
     /**
@@ -97,7 +113,20 @@ public class TurtleSoup {
      *         otherwise of size (# of points) - 1
      */
     public static List<Double> calculateHeadings(List<Integer> xCoords, List<Integer> yCoords) {
-        throw new RuntimeException("implement me!");
+        List<Double> list = new ArrayList<>();
+        double currentHeading = 0.0;
+        while (!xCoords.isEmpty()) {
+            int currX = xCoords.remove(0);
+            int currY = yCoords.remove(0);
+            if (xCoords.isEmpty()) {
+                break;
+            }
+            int targetX = xCoords.get(0);
+            int targetY = yCoords.get(0);
+            currentHeading = calculateHeadingToPoint(currentHeading, currX, currY, targetX, targetY);
+            list.add(currentHeading);
+        }
+        return list;
     }
 
     /**
@@ -122,7 +151,7 @@ public class TurtleSoup {
     public static void main(String args[]) {
         DrawableTurtle turtle = new DrawableTurtle();
 
-        drawSquare(turtle, 40);
+        drawRegularPolygon(turtle, 6, 40);
 
         // draw the window
         turtle.draw();
