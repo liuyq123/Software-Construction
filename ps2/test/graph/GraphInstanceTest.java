@@ -19,9 +19,6 @@ import org.junit.Test;
  */
 public abstract class GraphInstanceTest {
     
-    // Testing strategy
-    //   TODO
-    
     /**
      * Overridden by implementation-specific test classes.
      * 
@@ -123,5 +120,5 @@ public abstract class GraphInstanceTest {
         targets.put("a", 4);
         assertEquals(targets, emptyInstance.targets("4"));
     }
-    
+
 }

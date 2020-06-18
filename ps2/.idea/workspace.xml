@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="63caf295-b646-4c51-ad5f-adb3f9a9604f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ps0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ps0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/graph/GraphInstanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/graph/GraphInstanceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,15 +20,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/graph/GraphStaticTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="-58">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1008#1009#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#1979#0" expanded="true" />
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,25 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
-              <folding>
-                <element signature="e#2749#2757#0" expanded="true" />
-                <element signature="e#3471#3488#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-797">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding>
-                <element signature="e#947#948#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1">
+              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -67,6 +68,8 @@
       <list>
         <option value="$PROJECT_DIR$/test/graph/GraphStaticTest.java" />
         <option value="$PROJECT_DIR$/test/graph/GraphInstanceTest.java" />
+        <option value="$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java" />
+        <option value="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" />
       </list>
     </option>
   </component>
@@ -111,20 +114,6 @@
             <path>
               <item name="ps2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ps2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="graph" type="462c0819:PsiDirectoryNode" />
-              <item name="ConcreteEdgesGraph.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="ps2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="graph" type="462c0819:PsiDirectoryNode" />
-              <item name="ConcreteVerticesGraph.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="ps2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ps2" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -144,6 +133,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -236,8 +226,25 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/graph/ConcreteEdgesGraphTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="195">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/graph/GraphStaticTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -250,21 +257,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="2227">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+          <folding>
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#2135#2136#0" expanded="true" />
+            <element signature="e#3213#3214#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3321#3322#0" expanded="true" />
+            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
+            <element signature="e#3407#3408#0" expanded="true" />
+            <element signature="e#3443#3444#0" expanded="true" />
+            <element signature="e#3464#3465#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-797">
+        <state relative-caret-position="-58">
           <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <element signature="e#947#948#0" expanded="true" />
@@ -273,25 +286,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
+        <state relative-caret-position="420">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding>
-            <element signature="e#2749#2757#0" expanded="true" />
-            <element signature="e#3471#3488#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/graph/GraphStaticTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#0#1979#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
           </folding>
         </state>
       </provider>

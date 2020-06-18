@@ -29,7 +29,7 @@ public class ConcreteVerticesGraph implements Graph<String> {
     // TODO checkRep
     
     @Override public boolean add(String vertex) {
-        throw new RuntimeException("not implemented");
+        
     }
     
     @Override public int set(String source, String target, int weight) {
