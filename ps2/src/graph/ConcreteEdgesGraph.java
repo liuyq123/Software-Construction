@@ -15,15 +15,6 @@ public class ConcreteEdgesGraph implements Graph<String> {
     private final Set<String> vertices = new HashSet<>();
     private final List<Edge> edges = new ArrayList<>();
 
-    
-    // checkRep
-    private void checkRep() {
-        for (String vertex : vertices)
-            assert (vertex != null);
-        for (Edge edge : edges)
-            assert (edge != null);
-    }
-    
     @Override public boolean add(String vertex) {
         return vertices.add(vertex);
     }
@@ -33,7 +24,18 @@ public class ConcreteEdgesGraph implements Graph<String> {
             throw new RuntimeException("weight cannot be negative!");
         }
 
-        int prevWeight = sources(target).get(source);
+        if (source == target)
+            return 0;
+
+        int prevWeight;
+        if (sources(target).isEmpty()) {
+            prevWeight = 0;
+        } else if (sources(target).get(source) == null){
+            prevWeight = 0;
+        } else {
+            prevWeight = sources(target).get(source);
+        }
+
         vertices.add(source);
         vertices.add(target);
         Edge oldEdge = new Edge(source, target, prevWeight);
@@ -107,11 +109,6 @@ class Edge {
         this.source = source;
         this.target = target;
         this.weight = weight;
-        checkRep();
-    }
-    
-    private void checkRep() {
-        assert (weight > 0 && !source.equals(target));
     }
     
     public String source() {

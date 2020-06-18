@@ -103,22 +103,34 @@ public abstract class GraphInstanceTest {
         emptyInstance.add("d");
 
         emptyInstance.set("a", "b", 1);
-        emptyInstance.set("b", "c", 3);
+        emptyInstance.set("a", "c", 3);
         emptyInstance.set("a", "d", 5);
         emptyInstance.set("b", "b", 1);
         emptyInstance.set("b", "b", 1);
         emptyInstance.set("b", "c", 2);
         emptyInstance.set("d", "a", 4);
 
-        Map<String, Integer> targets = new HashMap<String, Integer>();
+        Map<String, Integer> sources = new HashMap<>();
+        sources.put("d", 4);
+        assertEquals(sources, emptyInstance.sources("a"));
+        sources.remove("d");
+        sources.put("a", 3);
+        sources.put("b", 2);
+        assertEquals(sources, emptyInstance.sources("c"));
+        sources.clear();
+        sources.put("a", 1);
+        assertEquals(sources, emptyInstance.sources("b"));
+        assertEquals(Collections.EMPTY_MAP, emptyInstance.sources("e"));
+
+        Map<String, Integer> targets = new HashMap<>();
         targets.put("b", 1);
         targets.put("c", 3);
         targets.put("d", 5);
-        assertEquals(targets, emptyInstance.targets("1"));
-        assertEquals(Collections.EMPTY_MAP, emptyInstance.targets("3"));
+        assertEquals(targets, emptyInstance.targets("a"));
+        assertEquals(Collections.EMPTY_MAP, emptyInstance.targets("c"));
         targets.clear();
         targets.put("a", 4);
-        assertEquals(targets, emptyInstance.targets("4"));
+        assertEquals(targets, emptyInstance.targets("d"));
     }
 
 }
