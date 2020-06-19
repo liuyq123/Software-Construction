@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63caf295-b646-4c51-ad5f-adb3f9a9604f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ps0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ps0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/graph/GraphInstanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/graph/GraphInstanceTest.java" afterDir="false" />
     </list>
@@ -21,10 +19,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1490">
+              <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3484#3485#0" expanded="true" />
+                <element signature="e#3520#3521#0" expanded="true" />
+                <element signature="e#3553#3554#0" expanded="true" />
+                <element signature="e#3587#3588#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#2678#2686#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="415">
               <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
               <folding>
                 <element signature="e#947#948#0" expanded="true" />
@@ -34,25 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
-              <folding>
-                <element signature="e#2309#2310#0" expanded="true" />
-                <element signature="e#3407#3408#0" expanded="true" />
-                <element signature="e#3441#3442#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
+        <entry file="file://$PROJECT_DIR$/test/graph/ConcreteVerticesGraphTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+            <state relative-caret-position="195">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -66,9 +81,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test/graph/GraphStaticTest.java" />
-        <option value="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" />
         <option value="$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java" />
         <option value="$PROJECT_DIR$/test/graph/GraphInstanceTest.java" />
+        <option value="$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java" />
       </list>
     </option>
   </component>
@@ -113,6 +128,13 @@
             <path>
               <item name="ps2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ps2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="ConcreteEdgesGraph.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="ps2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ps2" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -149,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ConcreteVerticesGraphTest">
     <configuration name="ConcreteEdgesGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ps2" />
       <extension name="coverage">
@@ -165,8 +187,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConcreteVerticesGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ps2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graph.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="graph" />
+      <option name="MAIN_CLASS_NAME" value="graph.ConcreteVerticesGraphTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConcreteVerticesGraphTest" />
         <item itemvalue="JUnit.ConcreteEdgesGraphTest" />
       </list>
     </recent_temporary>
@@ -185,32 +223,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 36m 50s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 20h 34m 41s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 44m 20s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 20h 34m 49s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 44m 39s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 20h 39m 23s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 45m 20s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 20h 42m 58s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 51m 01s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 20h 55m 37s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 52m 20s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 21h 19m 18s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 54m 05s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 21h 21m 15s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 12h 58m 58s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 21h 22m 10s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcreteEdgesGraphTest - 2020.06.18 at 13h 00m 31s.xml">
-      <configuration name="ConcreteEdgesGraphTest" configurationId="JUnit" />
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 21h 27m 13s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConcreteVerticesGraphTest - 2020.06.18 at 21h 33m 25s.xml">
+      <configuration name="ConcreteVerticesGraphTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -231,8 +272,8 @@
       <window_info anchor="bottom" id="Style Checker" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3048193" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -256,14 +297,15 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Style Checker" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32891566" />
+      <window_info anchor="bottom" id="Style Checker" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -285,25 +327,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/graph/ConcreteVerticesGraphTest.java">
+    <entry file="file://$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+        <state relative-caret-position="-641">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#0#1979#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2189#2190#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -315,9 +345,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/internal/runners/model/EachTestNotifier.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runner/notification/RunNotifier.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#2379#2380#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4488#4489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runner/notification/SynchronizedRunListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runner/Result.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runner/notification/Failure.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runner/Description.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="e#4327#4328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/graph/ConcreteVerticesGraphTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="415">
           <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
           <folding>
             <element signature="e#947#948#0" expanded="true" />
@@ -326,21 +432,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="109" column="22" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graph/ConcreteEdgesGraph.java">
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+        <state relative-caret-position="167">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
           <folding>
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#3407#3408#0" expanded="true" />
-            <element signature="e#3441#3442#0" expanded="true" />
+            <element signature="e#2111#2112#0" expanded="true" />
+            <element signature="e#2155#2156#0" expanded="true" />
+            <element signature="e#6484#6648#0" expanded="true" />
+            <element signature="e#6647#6648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../cs61b/library-sp18/javalib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/graph/GraphInstanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#2678#2686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/ConcreteVerticesGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1490">
+          <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3484#3485#0" expanded="true" />
+            <element signature="e#3520#3521#0" expanded="true" />
+            <element signature="e#3553#3554#0" expanded="true" />
+            <element signature="e#3587#3588#0" expanded="true" />
           </folding>
         </state>
       </provider>
