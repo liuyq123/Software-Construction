@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+
 /**
  * Tests for ConcreteVerticesGraph.
  * 
@@ -27,19 +29,34 @@ public class ConcreteVerticesGraphTest extends GraphInstanceTest {
     /*
      * Testing ConcreteVerticesGraph...
      */
-    
-    // Testing strategy for ConcreteVerticesGraph.toString()
-    //   TODO
-    
-    // TODO tests for ConcreteVerticesGraph.toString()
+
+    @Test
+    public void testToString() {
+        Graph<String> graph = emptyInstance();
+        graph.add("a");
+        graph.add("b");
+        graph.set("a", "b", 1);
+        assertEquals("ab", graph.toString());
+    }
+
     
     /*
      * Testing Vertex...
      */
-    
-    // Testing strategy for Vertex
-    //   TODO
-    
-    // TODO tests for operations of Vertex
+
+    @Test
+    public void testVertices() {
+        Vertex<String> v1 = new Vertex<>("a");
+        Vertex<String> v2 = new Vertex<>("b");
+        v1.addInEdge("second", 1);
+        v2.addOutEdge("first", 2);
+        HashMap<String, Integer> result1 = new HashMap<>(), result2 = new HashMap<>();
+        result1.put("second", 1);
+        result2.put("first", 2);
+        assertEquals(result1, v1.getInEdges());
+        assertEquals(new HashMap<>(), v1.getOutEdges());
+        assertEquals(new HashMap<>(), v2.getInEdges());
+        assertEquals(result2, v2.getOutEdges());
+    }
     
 }
