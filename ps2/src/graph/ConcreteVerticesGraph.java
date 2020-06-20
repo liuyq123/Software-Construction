@@ -3,117 +3,129 @@
  */
 package graph;
 
-import edu.princeton.cs.algs4.In;
 
 import java.util.*;
 
 /**
  * An implementation of Graph.
- *
  * <p>PS2 instructions: you MUST use the provided rep.
  */
-public class ConcreteVerticesGraph implements Graph<String> {
+public class ConcreteVerticesGraph<L> implements Graph<L> {
 
-    private final List<Vertex> vertices = new ArrayList<>();
+    private final List<Vertex<L>> vertices = new ArrayList<>();
 
-    @Override public boolean add(String vertex) {
-        for (Vertex v : vertices) {
-            if (v.getVertex() == vertex)
+    @Override public boolean add(L vertex) {
+        for (Vertex<L> v : vertices) {
+            if (v.getVertex().equals(vertex))
                 return false;
         }
-        vertices.add(new Vertex(vertex));
+        vertices.add(new Vertex<L>(vertex));
         return true;
     }
 
-    @Override public int set(String source, String target, int weight) {
+    @Override public int set(L source, L target, int weight) {
         if (weight < 0)
             throw new RuntimeException("weight cannot be negative");
 
-        if (source == target) {
-            return 0;
-        }
-
         add(source);
-        Vertex sourceV = null;
-        for (Vertex v : vertices) {
-            if (v.getVertex() == source)
+        Vertex<L> sourceV = null;
+        for (Vertex<L> v : vertices) {
+            if (v.getVertex().equals(source)) {
                 sourceV = v;
+                break;
+            }
         }
 
         add(target);
-        Vertex targetV = null;
-        for (Vertex v : vertices) {
-            if (v.getVertex() == target)
+        Vertex<L> targetV = null;
+        for (Vertex<L> v : vertices) {
+            if (v.getVertex().equals(target)) {
                 targetV = v;
+                break;
+            }
         }
 
-        int prevWeight;
+        int prevWeight = 0;
 
-        if (weight != 0) {
-            sourceV.addOutEdge(target, weight);
-            prevWeight = targetV.addInEdge(source, weight);
-        } else {
-            targetV.removeInEdge(source);
-            prevWeight = sourceV.removeOutEdge(target);
+        for (Vertex<L> outEntry : sourceV.getOutEdges().keySet()) {
+            if (outEntry.equals(targetV)) {
+                prevWeight = sourceV.setEdge(targetV, weight);
+            }
         }
+
+        if (prevWeight == 0)
+            sourceV.setEdge(targetV, weight);
 
         return prevWeight;
     }
 
-    @Override public boolean remove(String vertex) {
-        Vertex v = null;
-        for (Vertex ver : vertices) {
-            if (ver.getVertex() == vertex)
+    @Override public boolean remove(L vertex) {
+        Vertex<L> v = null;
+        for (Vertex<L> ver : vertices) {
+            if (ver.getVertex().equals(vertex))
                 v = ver;
         }
 
         if (v == null)
             return false;
 
-        Map<String, Integer> out = v.getOutEdges();
-        Map<String, Integer> in = v.getInEdges();
+        Map<Vertex<L>, Integer> out = v.getOutEdges();
+        Map<Vertex<L>, Integer> in = v.getInEdges();
 
-        if (vertices.contains(v)) {
-            for (Map.Entry<String, Integer> outEntry : out.entrySet()) {
-                Vertex o = new Vertex(outEntry.getKey());
-                o.getInEdges().remove(vertex);
-            }
-            for (Map.Entry<String, Integer> inEntry : in.entrySet()) {
-                Vertex i = new Vertex(inEntry.getKey());
-                i.getOutEdges().remove(vertex);
-            }
+
+        for (Map.Entry<Vertex<L>, Integer> outEntry : out.entrySet()) {
+            v.setEdge(outEntry.getKey(), 0);
+        }
+        for (Map.Entry<Vertex<L>, Integer> inEntry : in.entrySet()) {
+            inEntry.getKey().setEdge(v, 0);
         }
 
         return vertices.remove(v);
     }
 
-    @Override public Set<String> vertices() {
-        Set<String> set = new HashSet<>();
-        for (Vertex v : vertices) {
+    @Override public Set<L> vertices() {
+        final Set<L> set = new HashSet<>();
+        for (Vertex<L> v : vertices) {
             set.add(v.getVertex());
         }
         return set;
     }
 
-    @Override public Map<String, Integer> sources(String target) {
-        for (Vertex s : vertices) {
-            if (s.getVertex() == target);
-            return s.getInEdges();
+    @Override public Map<L, Integer> sources(L target) {
+        final Map<L, Integer> map = new HashMap<>();
+
+        for (Vertex<L> t : vertices) {
+            if (t.getVertex().equals(target))
+                for (Map.Entry<Vertex<L>, Integer> entry : t.getInEdges().entrySet()) {
+                    map.put(entry.getKey().getVertex(), entry.getValue());
+                }
         }
-        return null;
+
+        return map;
     }
 
-    @Override public Map<String, Integer> targets(String source) {
-        for (Vertex s : vertices) {
-            if (s.getVertex() == source);
-            return s.getOutEdges();
+    @Override public Map<L, Integer> targets(L source) {
+        final Map<L, Integer> map = new HashMap<>();
+
+        for (Vertex<L> s : vertices) {
+            if (s.getVertex().equals(source))
+                for (Map.Entry<Vertex<L>, Integer> entry : s.getOutEdges().entrySet()) {
+                    map.put(entry.getKey().getVertex(), entry.getValue());
+                }
         }
-        return null;
+
+        return map;
     }
 
 
 
-    // TODO toString()
+    public String toString() {
+        String s = "";
+        for (Vertex v : vertices) {
+            s += v.toString();
+        }
+        return s;
+    }
 
 }
 
@@ -124,86 +136,46 @@ public class ConcreteVerticesGraph implements Graph<String> {
  * <p>PS2 instructions: the specification and implementation of this class is
  * up to you.
  */
-class Vertex {
+class Vertex<L> {
 
-    private final String vertex;
-    private Map<String, Integer> inEdges = new HashMap<>();
-    private Map<String, Integer> outEdges = new HashMap<>();
+    private final L vertex;
+    private final Map<Vertex<L>, Integer> inEdges = new HashMap<>();
+    private final Map<Vertex<L>, Integer> outEdges = new HashMap<>();
 
-    Vertex(String vertex) {
+    Vertex(L vertex) {
         this.vertex = vertex;
     }
 
-    public String getVertex() {
+    public L getVertex() {
         return this.vertex;
     }
 
-    public Map<String, Integer> getInEdges() {
-        Map<String, Integer> sources = new HashMap<>();
+    public Map<Vertex<L>, Integer> getInEdges() {
+        Map<Vertex<L>, Integer> sources = new HashMap<>();
         sources.putAll(inEdges);
         return sources;
     }
 
-    public Map<String, Integer> getOutEdges() {
-        Map<String, Integer> targets = new HashMap<>();
+    public Map<Vertex<L>, Integer> getOutEdges() {
+        Map<Vertex<L>, Integer> targets = new HashMap<>();
         targets.putAll(outEdges);
         return targets;
     }
 
-    // return the weight of the removed edge, or 0 if not exist
-    public int removeInEdge(String source) {
-        if (!inEdges.containsKey(source)) {
-            return 0;
+    public int setEdge(Vertex<L> v, int weight) {
+        final int prevWeight = outEdges.getOrDefault(v, 0);
+        if (weight > 0) {
+            outEdges.put(v, weight);
+            v.inEdges.put(this, weight);
+        } else {
+            outEdges.remove(v, weight);
+            v.inEdges.remove(this, weight);
         }
-
-        int weight = inEdges.remove(source);
-        return weight;
+        return prevWeight;
     }
 
-    public int removeOutEdge(String target) {
-        if (!outEdges.containsKey(target)) {
-            return 0;
-        }
-
-        int weight = outEdges.remove(target);
-        return weight;
+    public String toString() {
+        return getVertex().toString();
     }
-
-    // return prev weight of the edge
-    public int addInEdge(String source, int weight) {
-        int prevWeight;
-        if (!inEdges.containsKey(source)) {
-            prevWeight = 0;
-        } else {
-            prevWeight = inEdges.get(source);
-            removeInEdge(source);
-        }
-
-        if (weight == 0) {
-            return prevWeight;
-        } else {
-            inEdges.put(source, weight);
-            return prevWeight;
-        }
-    }
-
-    public int addOutEdge(String target, int weight) {
-        int prevWeight;
-        if (!outEdges.containsKey(target)) {
-            prevWeight = 0;
-        } else {
-            prevWeight = outEdges.get(target);
-            removeInEdge(target);
-        }
-
-        if (weight == 0) {
-            return prevWeight;
-        } else {
-            outEdges.put(target, weight);
-            return prevWeight;
-        }
-    }
-
-    // TODO toString()
 
 }

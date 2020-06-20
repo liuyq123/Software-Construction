@@ -44,19 +44,8 @@ public class ConcreteVerticesGraphTest extends GraphInstanceTest {
      * Testing Vertex...
      */
 
-    @Test
+   @Test
     public void testVertices() {
-        Vertex<String> v1 = new Vertex<>("a");
-        Vertex<String> v2 = new Vertex<>("b");
-        v1.addInEdge("second", 1);
-        v2.addOutEdge("first", 2);
-        HashMap<String, Integer> result1 = new HashMap<>(), result2 = new HashMap<>();
-        result1.put("second", 1);
-        result2.put("first", 2);
-        assertEquals(result1, v1.getInEdges());
-        assertEquals(new HashMap<>(), v1.getOutEdges());
-        assertEquals(new HashMap<>(), v2.getInEdges());
-        assertEquals(result2, v2.getOutEdges());
     }
     
 }

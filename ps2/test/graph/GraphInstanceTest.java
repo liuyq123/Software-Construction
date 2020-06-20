@@ -60,10 +60,7 @@ public abstract class GraphInstanceTest {
         assertEquals(1, emptyInstance.set("a", "b", 2));
 
         assertEquals(0, emptyInstance.set("c", "c", 1));
-        assertEquals(0, emptyInstance.set("c", "c", 1));
-
-        assertEquals(Collections.EMPTY_MAP, emptyInstance.sources("c"));
-        assertEquals(Collections.EMPTY_MAP, emptyInstance.targets("c"));
+        assertEquals(1, emptyInstance.set("c", "c", 1));
     }
 
     @Test
@@ -119,6 +116,7 @@ public abstract class GraphInstanceTest {
         assertEquals(sources, emptyInstance.sources("c"));
         sources.clear();
         sources.put("a", 1);
+        sources.put("b", 1);
         assertEquals(sources, emptyInstance.sources("b"));
         assertEquals(Collections.EMPTY_MAP, emptyInstance.sources("e"));
 
