@@ -44,8 +44,4 @@ public class ConcreteVerticesGraphTest extends GraphInstanceTest {
      * Testing Vertex...
      */
 
-   @Test
-    public void testVertices() {
-    }
-    
 }

@@ -14,15 +14,15 @@ import java.io.IOException;
  * Tests for GraphPoet.
  */
 public class GraphPoetTest {
-    
+
     @Test(expected=AssertionError.class)
     public void testAssertionsEnabled() {
         assert false; // make sure assertions are enabled with VM argument: -ea
     }
-    
+
     @Test
     public void testEmptyInput() throws IOException {
-        File corpus = new File("test/poet/mugar-omni-theater.txt");
+        File corpus = new File("src/poet/mugar-omni-theater.txt");
         GraphPoet graph = new GraphPoet(corpus);
         String input = "";
         String output = graph.poem(input);
@@ -31,11 +31,11 @@ public class GraphPoetTest {
 
     @Test
     public void testPoem() throws IOException {
-        File corpus = new File("test/poet/mugar-omni-theater.txt");
+        File corpus = new File("src/poet/mugar-omni-theater.txt");
         GraphPoet graph = new GraphPoet(corpus);
-        String input = "to new worlds.";
+        String input = "Test the Theater system.";
         String output = graph.poem(input);
-        String expected = "to explore new worlds.";
+        String expected = "test of the theater sound system.";
         assertEquals(expected, output);
     }
 }

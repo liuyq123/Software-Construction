@@ -5,12 +5,15 @@ package poet;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 import graph.Graph;
 
 /**
  * A graph-based poetry generator.
- * 
+ *
  * <p>GraphPoet is initialized with a corpus of text, which it uses to derive a
  * word affinity graph.
  * Vertices in the graph are words. Words are defined as non-empty
@@ -18,7 +21,7 @@ import graph.Graph;
  * delimited in the corpus by spaces, newlines, or the ends of the file.
  * Edges in the graph count adjacencies: the number of times "w1" is followed by
  * "w2" in the corpus is the weight of the edge from w1 to w2.
- * 
+ *
  * <p>For example, given this corpus:
  * <pre>    Hello, HELLO, hello, goodbye!    </pre>
  * <p>the graph would contain two edges:
@@ -26,7 +29,7 @@ import graph.Graph;
  *     <li> ("hello,") -> ("goodbye!") with weight 1 </ul>
  * <p>where the vertices represent case-insensitive {@code "hello,"} and
  * {@code "goodbye!"}.
- * 
+ *
  * <p>Given an input string, GraphPoet generates a poem by attempting to
  * insert a bridge word between every adjacent pair of words in the input.
  * The bridge word between input words "w1" and "w2" will be some "b" such that
@@ -36,14 +39,14 @@ import graph.Graph;
  * In the output poem, input words retain their original case, while bridge
  * words are lower case. The whitespace between every word in the poem is a
  * single space.
- * 
+ *
  * <p>For example, given this corpus:
  * <pre>    This is a test of the Mugar Omni Theater sound system.    </pre>
  * <p>on this input:
  * <pre>    Test the system.    </pre>
  * <p>the output poem would be:
  * <pre>    Test of the system.    </pre>
- * 
+ *
  * <p>PS2 instructions: this is a required ADT class, and you MUST NOT weaken
  * the required specifications. However, you MAY strengthen the specifications
  * and you MAY add additional methods.
@@ -51,38 +54,74 @@ import graph.Graph;
  * class is up to you.
  */
 public class GraphPoet {
-    
+
     private final Graph<String> graph = Graph.empty();
-    
-    // Abstraction function:
-    //   TODO
-    // Representation invariant:
-    //   TODO
-    // Safety from rep exposure:
-    //   TODO
-    
+
     /**
      * Create a new poet with the graph from corpus (as described above).
-     * 
+     *
      * @param corpus text file from which to derive the poet's affinity graph
      * @throws IOException if the corpus file cannot be found or read
      */
     public GraphPoet(File corpus) throws IOException {
-        throw new RuntimeException("not implemented");
+        String first = "", second = "";
+        Scanner sc = new Scanner(corpus);
+        if (sc.hasNext()) {
+            second = sc.next().toLowerCase();
+        }
+
+        while (sc.hasNext()) {
+            first = second;
+            second = sc.next().toLowerCase();
+            Map<String, Integer> sources;
+            sources = graph.sources(second);
+            if (sources.containsKey(first)) {
+                int weight = sources.get(first);
+                graph.set(first, second, weight + 1);
+            } else {
+                graph.set(first, second, 1);
+            }
+        }
+        sc.close();
     }
-    
-    // TODO checkRep
-    
+
     /**
      * Generate a poem.
-     * 
+     *
      * @param input string from which to create the poem
      * @return poem (as described above)
      */
     public String poem(String input) {
-        throw new RuntimeException("not implemented");
+        String output = "";
+        String first = "", second = "";
+        Scanner sc = new Scanner(input);
+
+        if (sc.hasNext()) {
+            second = sc.next().toLowerCase();
+        }
+
+        while (sc.hasNext()) {
+            output += second + " ";
+            first = second;
+            second = sc.next().toLowerCase();
+
+            Map<String, Integer> sources = graph.sources(second);
+
+            for (String key : sources.keySet()) {
+                Map<String, Integer> s = graph.sources(key);
+                if (s.containsKey(first)) {
+                    output += key + " ";
+                    break;
+                }
+            }
+        }
+        output += second;
+        sc.close();
+        return output;
     }
-    
-    // TODO toString()
-    
+
+    public String toString() {
+        return graph.toString();
+    }
+
 }
