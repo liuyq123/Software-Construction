@@ -29,15 +29,11 @@ public class ConcreteEdgesGraphTest extends GraphInstanceTest {
      */
     
     // Testing strategy for ConcreteEdgesGraph.toString()
-
     
     /*
      * Testing Edge...
      */
     
     // Testing strategy for Edge
-    //   TODO
-    
-    // TODO tests for operations of Edge
     
 }
