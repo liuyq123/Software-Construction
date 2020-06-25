@@ -3,6 +3,13 @@
  */
 package expressivo;
 
+import expressivo.parser.ExpressionLexer;
+import expressivo.parser.ExpressionParser;
+import org.antlr.runtime.*;
+import org.antlr.v4.runtime.misc.ParseCancellationException;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
+
 /**
  * An immutable data type representing a polynomial expression of:
  *   + and *
@@ -26,7 +33,34 @@ public interface Expression {
      * @throws IllegalArgumentException if the expression is invalid
      */
     public static Expression parse(String input) {
-        throw new RuntimeException("unimplemented");
+        CharStream stream = new ANTLRInputStream(input);
+        ExpressionLexer lexer = new ExpressionLexer(stream);
+        TokenStream tokens = new CommonTokenStream(lexer);
+        ExpressionParser parser = new ExpressionParser(tokens);
+
+        parser.reportErrorsAsExceptions();
+        lexer.reportErrorsAsExceptions();
+
+        ParseTree tree;
+
+        try {
+            tree = parser.root();
+        } catch (ParseCancellationException e) {
+            String reason = e.getMessage();
+            String msg;
+            if (reason != null)
+                msg = "Syntax error in expression: " + reason;
+            else
+                msg = "Undefined syntax error in expression";
+            throw new IllegalArgumentException(msg);
+        }
+
+        ParseTreeWalker walker = new ParseTreeWalker();
+        ExpressionGenerator listener = new ExpressionGenerator();
+
+        walker.walk(listener, tree);
+
+        return listener.get();
     }
     
     /**

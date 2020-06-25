@@ -11,16 +11,14 @@ import org.junit.Test;
  * Tests for the Expression abstract data type.
  */
 public class ExpressionTest {
-
-    // Testing strategy
-    //   TODO
     
     @Test(expected=AssertionError.class)
     public void testAssertionsEnabled() {
         assert false; // make sure assertions are enabled with VM argument: -ea
     }
-    
-    
-    // TODO tests for Expression
-    
+
+    @Test
+    public void testEqual() {
+
+    }
 }
